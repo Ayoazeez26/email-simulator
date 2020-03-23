@@ -1,0 +1,8 @@
+body {
+    background: rgb(23,80,147);
+    background: linear-gradient(90deg, rgba(23,80,147,1) 0%, rgba(61,200,154,1) 100%);
+}
+
+.emailRow {
+    background: #FFF;
+}
