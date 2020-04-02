@@ -6,3 +6,30 @@ body {
 .emailRow {
     background: #FFF;
 }
+
+form {
+    margin: 0 auto !important;
+}
+
+.displayGifs {
+    display: flex;
+}
+
+.spinner{
+    margin: 0 auto;
+    display: none;
+}
+
+.sentEmail {
+    margin: 0 auto;
+    display: none;
+    width: 100px;
+    height: 100px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

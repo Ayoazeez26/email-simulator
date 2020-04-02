@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize/css//materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="assets/style.css">
     <title>Email Simulator</title>
 </head>
 <body>
     <div class="container">
         <!-- Page Content goes here -->
         <div class="row">
-            <form class="col s12 m6 l6 emailRow">
+            <form class="col s12 m6 l6 push-s3 emailRow">
                 <div class="card-panel pink darken-2">SEND NEW EMAIL</div>
                 <div class="row">
                     <div class="input-field col s12">
@@ -22,18 +22,27 @@
                         <label for="email">To:</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Subject:</label>
+                        <input id="textSubject" type="text" class="validate">
+                        <label for="textSubject">Subject:</label>
                     </div>
                     <div class="input-field col s12">
-                        <input type="text" class="validate">
+                        <input id="text" type="text" class="validate">
                         <label for="text">Message:</label>
                     </div>
+                </div>
+                <div class="displayGifs">
+                    <img class="spinner" src="assets/images/Eclipse-1s-100px.gif" alt="spinner">
+                    <img class="sentEmail" src="assets/images/emailSent.gif" alt="emailsent">
+                </div>
+                <div class="buttons">
+                    <button class="sendMail btn waves-effect waves-light" disabled type="button" >Send<i class="material-icons right">send</i></button>
+                    <button class="resetForm btn waves-effect waves-light" type="reset">Reset<i class="material-icons right">delete</i></button>
                 </div>
             </form>
         </div>
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="materialize/js//materialize.min.js"></script>
+    <script src="test.js"></script>
 </body>
 </html>
