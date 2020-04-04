@@ -3,6 +3,10 @@ body {
     background: linear-gradient(90deg, rgba(23,80,147,1) 0%, rgba(61,200,154,1) 100%);
 }
 
+.container {
+    display: flex;
+}
+
 .emailRow {
     background: #FFF;
 }
@@ -11,8 +15,13 @@ form {
     margin: 0 auto !important;
 }
 
+.formRow {
+    margin-top: 50px;
+}
+
 .displayGifs {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .spinner{
@@ -23,7 +32,7 @@ form {
 .sentEmail {
     margin: 0 auto;
     display: none;
-    width: 100px;
+    width: 133px;
     height: 100px;
 }
 

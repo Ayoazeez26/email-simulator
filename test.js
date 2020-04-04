@@ -1,16 +1,19 @@
+let wholeForm = document.querySelector('form');
 let sendBtn = document.querySelector('.sendMail');
+let resetBtn = document.querySelector('.resetForm');
 let emailField = document.querySelector('#email');
 let subjectField = document.querySelector('#textSubject');
 let textField = document.querySelector('#text');
 let spinner = document.querySelector('.spinner');
 let emailSent = document.querySelector('.sentEmail');
 
-document.querySelector('form').addEventListener('click', validateForm);
+wholeForm.addEventListener('click', validateForm);
 sendBtn.addEventListener('click', showGifs);
+resetBtn.addEventListener('click', clearForm);
 
 function validateForm() {
     if(emailField.value != "" && subjectField.value != "" && textField.value != "") {
-        sendBtn.removeAttribute("disabled");
+        sendBtn.disabled = false;
     }
 }
 
@@ -20,9 +23,17 @@ function showGifs() {
     setTimeout(() => {
         spinner.style.display = "none";
         emailSent.style.display = "block";
+        setTimeout(() => {
+            emailSent.style.display = "none";
+            sendBtn.disabled = true;
+            wholeForm.reset();
+        }, 5000);
     }, 3000);
 }
 
+function clearForm() {
+    wholeForm.reset();
+}
 
 
 
